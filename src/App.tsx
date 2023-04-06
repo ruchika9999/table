@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
-  
+
   return (
     <div className="container">
       <Table theme={theme}>
@@ -49,15 +49,15 @@ function App() {
       <div>
         <div className="button-container">
           <button
-           data-testid="prv-button"
+            data-testid="prv-button"
             disabled={disablePrv}
             onClick={handlePrv}
             className={`button-style ${disablePrv && `disabled`}`}
           >
-            Prv
+            Previous
           </button>
           <button
-             data-testid="next-button"
+            data-testid="next-button"
             disabled={disableNext}
             onClick={handleNext}
             className={`button-style ${disableNext && `disabled`}`}

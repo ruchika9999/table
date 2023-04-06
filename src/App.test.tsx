@@ -38,6 +38,8 @@ test("Display default Table", async () => {
   const id = screen.getByText(headers.id);
   const title = screen.getByText(headers.title);
   const userId = screen.getByText(headers.userId);
+  const next = screen.getByText("Next");
+  const prv = screen.getByText("Previous");
 
   await (() => {
     const mockTitle = screen.getByText("quis ut nam facilis et officia qui");
@@ -46,6 +48,8 @@ test("Display default Table", async () => {
     expect(id).toBeInTheDocument();
     expect(completed).toBeInTheDocument();
     expect(title).toBeInTheDocument();
+    expect(next).toBeInTheDocument();
+    expect(prv).toBeInTheDocument();
     expect(userId).toBeInTheDocument();
     expect(mockId).toBeInTheDocument();
     expect(mockTitle).toBeInTheDocument();
